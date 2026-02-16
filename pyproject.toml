@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yagnidrift"
+version = "0.1.0"
+description = "Workgraph sidecar to catch speculative complexity drift (YAGNI)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+yagnidrift = "yagnidrift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yagnidrift*"]
